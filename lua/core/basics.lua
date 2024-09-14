@@ -9,12 +9,12 @@ vim.g.loaded_perl_provider = 0
 vim.g.clipboard = {
     name = 'myClipboard',
     copy = {
-        ['+'] = { 'tmux', 'load-buffer', '-' },
-        ['*'] = { 'tmux', 'load-buffer', '-' },
+        ['+'] = { 'xclip', '-i' },
+        ['*'] = { 'xclip', '-i' },
     },
     paste = {
-        ['+'] = { 'tmux', 'save-buffer', '-' },
-        ['*'] = { 'tmux', 'save-buffer', '-' },
+        ['+'] = { 'xclip', '-o' },
+        ['*'] = { 'xclip', '-o' },
     },
     cache_enabled = 1,
 }
