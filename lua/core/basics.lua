@@ -9,8 +9,8 @@ vim.g.loaded_perl_provider = 0
 vim.g.clipboard = {
     name = 'myClipboard',
     copy = {
-        ['+'] = { 'xclip', '-i' },
-        ['*'] = { 'xclip', '-i' },
+        ['+'] = { 'xclip', '-i', '-selection', 'clipboard' },
+        ['*'] = { 'xclip', '-i', '-selection', 'clipboard' },
     },
     paste = {
         ['+'] = { 'xclip', '-o' },
