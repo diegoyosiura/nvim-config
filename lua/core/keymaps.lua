@@ -1,21 +1,19 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-vim.g.clipboard = 'xclipboard'
-
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 local opts = { noremap = true, silent = true }
 
--- Comando para copiar no registrador padrão.
-vim.keymap.set('v', '<leader>ccc', '"+y<CR>:\'<,\'> <CR>', opts)
+-- Copiar para o clipboard do sistema (registrador +).
+vim.keymap.set('v', '<leader>ccc', '"+y', opts)
 
 -- Comandos para centralizar a navegação
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 
 -- Busca e centraliza
-vim.keymap.set('n', '<n>', 'nzzzv', opts)
-vim.keymap.set('n', '<N>', 'Nzzzv', opts)
+vim.keymap.set('n', 'n', 'nzzzv', opts)
+vim.keymap.set('n', 'N', 'Nzzzv', opts)
 
 -- Redimensionar com as setas
 vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)

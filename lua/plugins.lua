@@ -26,4 +26,5 @@ require('lazy').setup({
 	require "plugins.neotree",
 	require "plugins.fuzzyfinder",
 	require "plugins.bufferline",
+	require "plugins.lsp",
 })
