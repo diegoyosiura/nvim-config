@@ -27,4 +27,6 @@ require('lazy').setup({
 	require "plugins.fuzzyfinder",
 	require "plugins.bufferline",
 	require "plugins.lsp",
+}, {
+	rocks = { enabled = false }, -- nenhum plugin usa luarocks
 })
